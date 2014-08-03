@@ -30,4 +30,4 @@ echo "-----> Moving mecab-config to PATH"
 cp /tmp/mecab/bin/mecab /app/bin/mecab
 cp /tmp/mecab/bin/mecab-config /app/bin/mecab-config
 
-bundle install --without test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+/app/bin/bundle install --without test --path /app/vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
