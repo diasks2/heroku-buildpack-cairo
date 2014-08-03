@@ -24,7 +24,3 @@ function vendor_binary() {
 
 echo "-----> Vendoring binaries"
 vendor_binary "libmecab-heroku.tar.gz" "/app/vendor/mecab" "include"
-
-echo "-----> Moving mecab-config to PATH"
-cp /app/vendor/mecab/bin/mecab /app/bin/mecab
-cp /app/vendor/mecab/bin/mecab-config /app/bin/mecab-config
