@@ -37,6 +37,7 @@ vendor_binary "libmecab-heroku.tar.gz" "$1/tmp/mecab" "include"
 vendor_binary "libmecab-heroku.tar.gz" "/tmp/mecab" "include"
 
 echo "-----> Moving mecab-config to PATH"
-mkdir -p /app/bin
 cp /tmp/mecab/bin/mecab /app/bin/mecab
 cp /tmp/mecab/bin/mecab-config /app/bin/mecab-config
+
+gem install mecab
