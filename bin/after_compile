@@ -1,3 +1,5 @@
-
-export CFLAGS="-I/app/vendor/mecab/include:$CFLAGS"
-export PATH="$PATH:/app/vendor/mecab/bin"
+export CPPPATH="$1/app/vendor/mecab/include:/app/vendor/mecab/include:$CPPPATH"
+export CPATH="$1/app/vendor/mecab/include:/app/vendor/mecab/include:$CPATH"
+export LIBRARY_PATH="$1/app/vendor/mecab/lib:/app/vendor/mecab/lib:$LIBRARY_PATH"
+export CFLAGS="-I$1/app/vendor/mecab/include:-I/app/vendor/mecab/include:$CFLAGS"
+export PATH="$PATH:/app/vendor/mecab/bin:$1/app/vendor/mecab/bin"
