@@ -32,7 +32,7 @@ export PATH="$PATH:$path/bin"
 
 echo "-----> Vendoring binaries"
 # vendor_binary "libmecab-heroku.tar.gz" "/app/vendor/mecab" "include"
-vendor_binary "libmecab-heroku.tar.gz" "vendor/mecab" "include"
+vendor_binary "libmecab-heroku.tar.gz" "/app/vendor/mecab" "include"
 
 cp vendor/mecab/bin/mecab-config bin/mecab-config
 
