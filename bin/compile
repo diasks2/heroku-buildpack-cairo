@@ -20,16 +20,6 @@ function vendor_binary() {
   mkdir -p $path
   package="https://s3.amazonaws.com/$S3_BUCKET/$binary"
   curl $package -s -o - | tar xz -C $path -f -
-  
-  echo "       Exporting $binary build and include paths"
-
-  export CPPPATH="$path/$include:$CPPPATH"
-  export CPATH="$path/$include:$CPATH"
-  export LIBRARY_PATH="$path/lib:$LIBRARY_PATH"
-  export PKG_CONFIG_PATH="$path/lib/pkgconfig:$PKG_CONFIG_PATH"
-  export CFLAGS="-I$path/$include:$CFLAGS"
-  export PATH="$path/bin:$PATH"
-  export LDFLAGS="-L$path/lib $LDFLAGS"
 }
 
 echo "-----> Vendoring binaries"
