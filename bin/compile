@@ -24,7 +24,7 @@ function vendor_binary() {
 }
 
 echo "-----> Vendoring binaries"
-vendor_binary "libmecab-heroku.tar.gz" "/app/vendor/mecab" "include"
-vendor_binary "libmecab-heroku.tar.gz" "$1/app/vendor/mecab" "include"
+# vendor_binary "libmecab-heroku.tar.gz" "/app/vendor/mecab" "include"
+vendor_binary "libmecab-heroku.tar.gz" "$1vendor/mecab" "include"
 
-cp /app/vendor/mecab/bin/mecab-config /app/bin/mecab-config
+cp $1/vendor/mecab/bin/mecab-config /app/bin/mecab-config
