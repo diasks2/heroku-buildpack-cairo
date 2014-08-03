@@ -33,4 +33,5 @@ function vendor_binary() {
 }
 
 echo "-----> Vendoring binaries"
+export PATH="/tmp/mecab/bin:$PATH"
 vendor_binary "libmecab-heroku.tar.gz" "$1/tmp/mecab" "include"
