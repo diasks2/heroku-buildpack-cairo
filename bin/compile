@@ -8,7 +8,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 # config
-S3_BUCKET="rumble-vulcan"
+S3_BUCKET="mecab"
 
 function vendor_binary() {
   binary="$1"
@@ -31,5 +31,4 @@ function vendor_binary() {
 }
 
 echo "-----> Vendoring binaries"
-vendor_binary "cairo-1.12.8.tgz" "$1/vendor/cairo-1.12.8" "include"
-vendor_binary "pixman-0.28.0.tgz" "$1/vendor/pixman-0.28.0" "include"
+vendor_binary "libmecab-heroku.tar.gz" "$1/vendor/mecab" "include"
