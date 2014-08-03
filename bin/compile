@@ -34,7 +34,7 @@ echo "-----> Vendoring binaries"
 # vendor_binary "libmecab-heroku.tar.gz" "/app/vendor/mecab" "include"
 vendor_binary "libmecab-heroku.tar.gz" "/app/vendor/mecab" "include"
 
-cp vendor/mecab/bin/mecab-config bin/mecab-config
+cp /app/vendor/mecab/bin/mecab-config /app/bin/mecab-config
 
 echo "-----> Printing Environment Variables"
 printenv
