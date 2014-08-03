@@ -28,6 +28,8 @@ function vendor_binary() {
   export LIBRARY_PATH="$path/lib:$LIBRARY_PATH"
   export PKG_CONFIG_PATH="$path/lib/pkgconfig:$PKG_CONFIG_PATH"
   export CFLAGS="-I$path/$include:$CFLAGS"
+  export PATH="$path/bin:$PATH"
+  export LDFLAGS="-L$path/lib $LDFLAGS"
 }
 
 echo "-----> Vendoring binaries"
